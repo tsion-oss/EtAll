@@ -4,7 +4,28 @@ const cors = require('cors')
 const db = require('./db')
 const PORT = process.env.PORT || 3001
 const AppRouter = require('./Router/AppRouter.js')
+// var logger = require('morgan');
+// new code below
+// var session = require('express-session');
+// var passport = require('passport');
 
+// app.use(cookieParser());
+// app.use(express.static(path.join(__dirname, 'public')));
+
+// app.use(session({
+//   secret: process.env.SECRET,
+//   resave: false,
+//   saveUninitialized: true
+// }));
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// server.js
+
+// require('./config/database');
+// // new code below
+// require('./config/passport');
 
 app.use(cors())
 app.use(express.json())

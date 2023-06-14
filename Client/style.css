@@ -1,10 +1,11 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Ysabeau", sans-serif;
   }
   body {
     line-height: 1.6;
+
   }
   header{
     background-color: black;
@@ -13,11 +14,13 @@
   }
 
   nav {
+    display: flex;
+    justify-content: center;
     background: #ffffff;
     padding: 10px;
     z-index: 1;
-    position: relative;
     top: 50px;
+    margin: 0
   }
   
   nav ul {
@@ -50,3 +53,192 @@
     height: 60px;
     background-color: black;
   }
+  #product .card{
+    width: 500px;
+  }
+
+  /* cartPage */
+ #orderSummary {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: fixed;
+  /* top: 70px; */
+  left: 700px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+  border: 2px solid black;
+ }
+  #cartAll{
+    display: flex;
+    flex: column;
+  }
+  #cart{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 223, 223);
+    padding: 50px;
+  }
+  #cart .card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 30px;
+    background-color: white;
+    width: 500px;
+    padding: 5px;
+    text-align: center;
+  }
+ 
+  /* login page */
+
+  #loginContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border-radius: 20px;
+    
+  }
+  #loginContainer #headingsignup{
+    font-size: 50px;
+  }
+  #loginContainer #or{
+    display: block;
+    align-items: center;
+    font-size: 20px;
+    color: gray;
+  }
+  #loginContainer a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  #loginContainer span{
+    display: inline-block;
+      width: 100px;
+      border-top: 1px solid rgb(183, 183, 183);
+      margin: 0 5px;
+  }
+  #loginContainer #google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid lightgray;
+    font-size: 20px;
+  }
+  #loginContainer #google img{
+    position: relative;
+    right: 70px
+  }
+  #loginContainer #upfb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    background-color: #1877f2;
+    color: white;
+    font-size: 20px; 
+    border: none;
+  }
+  #loginContainer #upfb img{
+    position: relative;
+    right: 70px
+  }
+  #loginContainer #semail{
+    width: 400px;
+    height: 60px;
+    background: none;
+    border: 1px solid lightgray;
+    font-size: 20px;
+  }
+ /* singup page */
+
+
+ #signupContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 150px;
+  border-radius: 20px;
+  
+}
+#signupContainer #headingsignup{
+  font-size: 50px;
+}
+#signupContainer #or{
+  display: block;
+  align-items: center;
+  font-size: 20px;
+  color: gray;
+}
+#signupContainer a{
+  text-decoration: none;
+  color: black;
+}
+
+#signupContainer span{
+  display: inline-block;
+    width: 100px;
+    border-top: 1px solid rgb(183, 183, 183);
+    margin: 0 5px;
+}
+#signupContainer #google{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  margin-bottom: 20px;
+  background: none;
+  border: 1px solid lightgray;
+  font-size: 20px;
+}
+#signupContainer #google img{
+  position: relative;
+  right: 70px
+}
+#signupContainer #upfb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  background-color: #1877f2;
+  color: white;
+  font-size: 20px; 
+  border: none;
+}
+#signupContainer #upfb img{
+  position: relative;
+  right: 70px
+}
+#signupContainer #semail{
+  width: 400px;
+  height: 60px;
+  background: none;
+  border: 1px solid lightgray;
+  font-size: 20px;
+}
+.close{
+  position: relative;
+  left: 400px;
+  top: 80px;
+}

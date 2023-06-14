@@ -23,32 +23,34 @@
     
     <nav>
        <ul>
-           <li><a id="home" href="index.html">Home</a></li>
+           <li><a id="home" href="home.html">Home</a></li>
            <li><a id="coffee" href="#">Coffees</a></li>
            <li><a id="spice" href="#">Spice Blends</a></li>
            <li><a id="teff" href="#">Teff Flours</a></li>
+           <li><a id="login" href="login.html">Log In</a></li>
+           <li><a id="signup" href="signup.html">Sign Up</a></li>
+           <a class="out" id="bag" href="cart.html">
+            <i class="fas fa-shopping-bag"></i>
+          </a>
         </ul>
     </nav>
-
-    <img id="hero-image" style="width: 100%" src="" />
-     
-    <section>
-      <div id="hero-bottom">
-        <img style="width: 100%"  src="">
-        <img style="width: 100%"  src="">
-      </div>
-      <div id="divider">
-        <h1></h1>
-        <p></p>
-      </div>
-      <div>
-        <img style="width: 100%"  src="">
-      </div>
-    </section>
-
-    <div>
-      <div id="product"></div>
-
+    <div id="heroDiv">
+    <img id="hero-image" style="width: 100%" src="images/packet.png" />
+     </div>
+    
+     <div id="product"></div>
+     <div id="cartAll">
+         <div id="cart">
+             
+         </div>
+         <div id="orderSummary">
+           <h1>Order Summary</h1>
+           <p>Subtotal</p>
+           <h4 id="subPrice"></h4>
+           <button>Checkout Now</button>
+        </div>
+       </div>
+   
     
     
     </body>
@@ -64,11 +66,8 @@
         </ul>
       </footer>
 </html>
-<a class="out" id="bag" href="cart.html">
-    <i class="fas fa-shopping-bag"></i>
-  </a>
-  <div id="search">
-    <i class="fas fa-search"></i>
+
+  
 
 
 

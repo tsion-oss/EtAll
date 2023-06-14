@@ -22,7 +22,47 @@ const getSpiceByID = async (req, res) => {
     }
 }
 
+
+const createSpice = async (req, res) => {
+    try{
+        const spice = await new Spice(req.body)
+        await spice.save()
+        return res.status(201).json({spice})
+    } catch (error) {
+        return res.status(500).json({ error: error.message})
+    }
+}
+
+const updateSpice = async (req, res) => {
+    try{
+        let { id } = req.params
+        let spice = await Spice.findByIdAndUpdate(id, res.body, { new: true })
+        if (spice) {
+            return res.status(200).json(spice)
+        }
+         throw new Error('Flight not found')
+    } catch (error){
+       return res.status(500).send(error.message)
+    }
+}
+
+const deleteSpice = async (req, res) => {
+    try{
+        const { id } = req.params
+        const deleted = await Spice.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Spice deleted')
+        }
+        throw new Error('Spice not found')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 module.exports = {
     getSpice,
-    getSpiceByID
+    getSpiceByID,
+    createSpice,
+    updateSpice,
+    deleteSpice
 }
