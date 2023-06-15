@@ -7,8 +7,9 @@ const orderSummary = document.querySelector('#orderSummary')
 const cartAll = document.querySelector('#cartAll')
 const heroImage = document.querySelector('#hero-image')
 const heroDiv = document.querySelector('#heroDiv')
-const homeButton = document.getElementById('home')
-
+const coffeeproduct = document.querySelector('#coffeeproduct')
+const homeButton = document.querySelector('#index')
+const detailsButton = document.getElementById('details')
 // Coffee Section
 
 
@@ -16,9 +17,9 @@ const homeButton = document.getElementById('home')
 
 coffeeButton.addEventListener('click', async () => {
   product.innerHTML = ""
-  heroImage.style.display = "none"
+  heroDiv.style.display = "none"
   cart.innerHTML = ""
-  cart.style.display = "none"
+  cartAll.style.display = "none"
   try {
     const response = await axios.get('http://localhost:3001/api/coffees');
     const coffees = response.data.coffees;
@@ -28,8 +29,8 @@ coffeeButton.addEventListener('click', async () => {
         const coffeeCard = document.createElement('div');
         coffeeCard.classList.add('card');
         coffeeCard.innerHTML = `
-          <img style="height: 400px; width: 400px;" src="images/packet.png" />
-          <h1>${coffee.name}</h1>
+        <a class="coffeeDetails"  data-image="${coffee.image}"href="product.html"><img style="height: 400px; width: 400px;" src="${coffee.image}" /></a>
+          <a class="coffeeDetails" data-name="${coffee.name}" href="product.html"><h1>${coffee.name}</h1></a>
           <p>${coffee.description}</p>
           <p id="price">$ ${coffee.price}</p>
           <button class="cartButton" type="button">Add To Cart</button>
@@ -40,6 +41,20 @@ coffeeButton.addEventListener('click', async () => {
           addToCartCoffee(coffee);
         });
 
+        const coffeeDetailsLinks = coffeeCard.querySelectorAll('.coffeeDetails')
+        coffeeDetailsLinks.forEach(coffeeDetailsLinks => {
+          coffeeDetailsLinks.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log(coffee)
+            const selectedCoffeeDiv  = document.createElement('div')
+             selectedCoffeeDiv.classList.add('coffeeCardDetails')
+            
+            
+            localStorage.setItem('selectedCoffee', JSON.stringify(coffee));
+            window.location.assign('/Client/product.html')
+          })
+        })
+
         product.appendChild(coffeeCard);
       });
     }
@@ -47,6 +62,8 @@ coffeeButton.addEventListener('click', async () => {
     console.error('Error:', error);
   }
 });
+
+
 
 function addToCartCoffee(coffee) {
   const cartItems = localStorage.getItem('cartItems');
@@ -67,9 +84,9 @@ function addToCartCoffee(coffee) {
 // Spice section
 spiceButton.addEventListener('click', async () => {
   product.innerHTML = ""
-  heroImage.style.display = "none"
+  heroDiv.style.display = "none"
   cart.innerHTML = ""
-  cart.style.display = "none"
+  cartAll.style.display = "none"
   try {
     const response = await axios.get('http://localhost:3001/api/spices');
     const spices = response.data.spices;
@@ -79,9 +96,10 @@ spiceButton.addEventListener('click', async () => {
         const spiceCard = document.createElement('div');
         spiceCard.classList.add('card');
         spiceCard.innerHTML = `
-          <img style="height: 400px; width: 400px;" src="images/packet.png" />
-          <h1>${spice.name}</h1>
+        <a class="spiceDetails"  data-image="${spice.image}"href="product.html"><img style="height: 400px; width: 400px;" src="${spice.image}" /></a>
+        <a class="spiceDetails" data-name="${spice.name}" href="product.html"><h1>${spice.name}</h1></a>
           <p>${spice.description}</p>
+          <p><h2>Ingredient</h2>${spice.ingredient}</p>
           <p id="price">$ ${spice.price}</p>
           <button class="cartButton" type="button">Add To Cart</button>
         `;
@@ -90,6 +108,20 @@ spiceButton.addEventListener('click', async () => {
         addToCartButton.addEventListener('click', () => {
           addToCartSpice(spice);
         });
+
+        const spiceDetailsLinks = spiceCard.querySelectorAll('.spiceDetails')
+        spiceDetailsLinks.forEach(spiceDetailsLinks => {
+          spiceDetailsLinks.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log(spice)
+            const selectedSpiceDiv  = document.createElement('div')
+             selectedSpiceDiv.classList.add('spiceCardDetails')
+            
+            
+            localStorage.setItem('selectedSpice', JSON.stringify(spice));
+            window.location.assign('/Client/product.html')
+          })
+        })
 
         product.appendChild(spiceCard);
       });
@@ -117,7 +149,7 @@ function addToCartSpice(spice) {
 // Teff Section
 teffButton.addEventListener('click', async () => {
   product.innerHTML = ""
-  heroImage.style.display = "none"
+  heroDiv.style.display = "none"
   cart.innerHTML = ""
   cart.style.display = "none"
   orderSummary.style.display = 'none'
@@ -130,8 +162,8 @@ teffButton.addEventListener('click', async () => {
         const teffCard = document.createElement('div');
         teffCard.classList.add('card');
         teffCard.innerHTML = `
-          <img style="height: 400px; width: 400px;" src="images/packet.png" />
-          <h1>${teff.name}</h1>
+        <a class="teffDetails"  data-image="${teff.image}"href="product.html"><img style="height: 400px; width: 400px;" src="${teff.image}" /></a>
+        <a class="teffDetails" data-name="${teff.name}" href="product.html"><h1>${teff.name}</h1></a>
           <p>${teff.description}</p>
           <p id="price">$ ${teff.price}</p>
           <button class="cartButton" type="button">Add To Cart</button>
@@ -141,6 +173,20 @@ teffButton.addEventListener('click', async () => {
         addToCartButton.addEventListener('click', () => {
           addToCartTeff(teff);
         });
+
+        const teffDetailsLinks = teffCard.querySelectorAll('.teffDetails')
+        teffDetailsLinks.forEach(teffDetailsLinks => {
+          teffDetailsLinks.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log(teff)
+            const selectedTeffDiv  = document.createElement('div')
+             selectedTeffDiv.classList.add('teffCardDetails')
+            
+            
+            localStorage.setItem('selectedteff', JSON.stringify(teff));
+            window.location.assign('/Client/product.html')
+          })
+        })
 
         product.appendChild(teffCard);
       });
@@ -174,8 +220,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const itemCard = document.createElement('div');
       itemCard.classList.add('card');
       itemCard.innerHTML = `
-        <img style="height: 200px; width: 200px;" src="${item.image}" />
-        <h1 id="cartName">${item.name}</h1>
+       <img style="height: 200px; width: 200px;" src="${item.image}" />
+        <h1  id="cartName">${item.name}</h1>
         <p id="cartprice">$ ${item.price}</p>
         <div>
           <button class="plus">+</button>
@@ -248,6 +294,7 @@ window.addEventListener('DOMContentLoaded', () => {
         cart.innerHTML = ""
         orderSummary.style.display = "none"
         const emptyCartMessage = document.createElement('p');
+        emptyCartMessage.classList.add('emptyCartMessage')
         emptyCartMessage.textContent = 'Your cart is empty.';
         cart.appendChild(emptyCartMessage);
       }
@@ -259,20 +306,24 @@ window.addEventListener('DOMContentLoaded', () => {
 });
     
 function clearHomePage() {
-  const homeButton = document.getElementById('home')
+
   homeButton.addEventListener('click', () => {
+    clearHomePage()
+    product.innerHTML = ""
+    heroImage.style.display = "none"
+    cart.style.display = "none"
+    cartAll.style.display = "none"
     
+
   })
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  clearHomePage()
-  product.innerHTML = ""
-  heroImage.style.display = "none"
-  cart.innerHTML = ""
-  cart.style.display = "none"
-  orderSummary.style.display = 'none'
-})
+
+
+
+
+
+
      
 
 
