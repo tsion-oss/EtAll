@@ -22,19 +22,27 @@
     <header>CLICK HERE FOR FREE SHIPPING POLICY</header>
     
     <section>
-    
-       <ul>
-           <li><a id="index" href="home.html">Home</a></li>
-           <li><a id="coffee" href="index.html">Coffees</a></li>
-           <li><a id="spice" href="index.html">Spice Blends</a></li>
-           <li><a id="teff" href="index.html">Teff Flours</a></li>
-           <li><a id="login" href="login.html">Log In</a></li>
-           <li><a id="signup" href="signup.html">Sign Up</a></li>
-           <a class="out" id="bag" href="cart.html">
-            <i class="fas fa-shopping-bag"></i>
-          </a>
-        </ul>
-    </section>
+     
+      <div id="indexUl">
+          <div id="indexUlone">
+             <a id="index" href="home.html"><img style="width: 80px" src="images/ethiologo.png"></a>
+          </div>
+          <div id="indexUltwo">
+              <ul>
+                 <li><a id="coffee" href="index.html">Coffees</a></li>
+                 <li><a id="spice" href="index.html">Spice Blends</a></li>
+                 <li><a id="teff" href="index.html">Teff Flours</a></li>
+             </ul>
+          </div>
+          <div id="indexUlthree">
+             <h1><a id="login" href="login.html">Log In</a></h1>
+             <a class="out" id="bag" href="cart.html">
+              <i class="fas fa-shopping-bag"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      
     
 
     <!-- <div id="heroDiv">
@@ -55,7 +63,22 @@
    </div>
    
 
-   
+   <div id="what">
+    <div id="subJoin">
+      <h1>Join the EtAll Team</h1>
+      <p>Get updates on what's new</p>
+    </div>
+
+<div id="subscribe">
+     <div>
+         <p>Email *</p>
+         <input type="text">
+       </div>
+      <div>
+        <button>Join</button>
+      </div>
+   </div>
+ </div>
 
         
       
@@ -69,61 +92,54 @@ const selectedCoffee = JSON.parse(localStorage.getItem('selectedCoffee'));
   const addCartButton = document.querySelector('.cartButton')
   const alpha = document.getElementById('alphaContainer')
   const coffeeMainContainer = document.getElementById('coffeeMainContainer')
-
+  const teffMainContainer = document.getElementById('teffMainContainer')
+  const spiceMainContainer = document.getElementById('spiceMainContainer')
 if (selectedCoffee) {
     console.log(selectedCoffee)
 
- 
+ teffMainContainer.innerHTML =""
+spiceMainContainer.innerHTML=""
  coffeeMainContainer.innerHTML = `
- <div>
-   <img src="${selectedCoffee.image}">
-   <p>${selectedCoffee.description}</p>
-   </div>
-   <div>
-   <h1>${selectedCoffee.name}</h1>
-   <h2>$${selectedCoffee.price}</h2>
+   <div id="coffeeImgBlock">
+      <img src="${selectedCoffee.image}">
+   
+    </div>
+    <div id="coffeeOthersBlock">
+      <p><a href="home.html">Home</a></p>
+      <h1>${selectedCoffee.name}</h1>
+      <h2>$${selectedCoffee.price}</h2>
+      <button class='cartButton'>ADD TO CART</button>
+      <h4>${selectedCoffee.description}</h4>
    </div> 
-   <button class='cartButton'>AddToCart</button>
  `
   
-// spiceMainContainer.innerHTML=""
-// teffMainContainer.innerHTML=""
-  
-//   console.log(coffeeImage)
-  
-      
-
-  // Display other details of the selected coffee
 }
 
 //spice section
 
    
     const selectedSpice = JSON.parse(localStorage.getItem('selectedSpice'));
-    const spiceMainContainer = document.getElementById('spiceMainContainer')
+  
 if (selectedSpice) {
   console.log(selectedSpice)
   
-
+coffeeMainContainer.innerHTML =""
+teffMainContainer.innerHTML=""
 spiceMainContainer.innerHTML = `
-<div>
- <img src="${selectedSpice.image}">
- <p>${selectedSpice.description}</p>
- </div>
- <div>
- <h1>${selectedSpice.name}</h1>
- <h2>$${selectedSpice.price}</h2>
- <p>${selectedSpice.ingredient}</p>
- </div> 
- <button class='cartButton'>AddToCart</button>
+    <div id="spiceImgBlock">
+      <img src="${selectedSpice.image}">
+      
+      </div>
+  <div id="spiceOthersBlock">
+    <p><a href="home.html">Home</a></p>
+      <h1>${selectedSpice.name}</h1>
+     <h2>$${selectedSpice.price}</h2>
+     <button class='cartButton'>AddToCart</button>
+     <h4>${selectedSpice.description}</h4>
+     <h3>Ingredient: <br> ${selectedSpice.ingredient}</h3>
+</div> 
 `
 
-
-// coffeeMainContainer.innerHTML =""
-// teffMainContainer.innerHTML=""
-
-
-// Display other details of the selected coffee
 }
 
 //teff Section 
@@ -131,24 +147,25 @@ spiceMainContainer.innerHTML = `
 
    
 const selectedTeff = JSON.parse(localStorage.getItem('selectedteff'));
-    const teffMainContainer = document.getElementById('teffMainContainer')
+   
 if (selectedTeff) {
   console.log(selectedTeff)
   
-// coffeeMainContainer.innerHTML =""
-// spiceMainContainer.innerHTML=""
+coffeeMainContainer.innerHTML =""
+spiceMainContainer.innerHTML=""
 teffMainContainer.innerHTML = `
 
-<div>
- <img src="${selectedTeff.image}">
- <p>${selectedTeff.description}</p>
- </div>
- <div>
- <h1>${selectedTeff.name}</h1>
- <h2>$${selectedTeff.price}</h2>
- <p>${selectedTeff.ingredient}</p>
- </div> 
- <button class='cartButton'>AddToCart</button>
+ <div id="teffImgBlock">
+       <img src="${selectedTeff.image}">
+  </div>
+  <div id="teffOthersBlock">
+    <p><a href="home.html">Home</a></p>
+     <h1>${selectedTeff.name}</h1>
+    <h2>$${selectedTeff.price}</h2>
+    <button class='cartButton'>AddToCart</button>
+    <h4>${selectedTeff.description}</h4>
+  </div> 
+
 `
 
 
@@ -160,16 +177,32 @@ teffMainContainer.innerHTML = `
     </script>
     </body>
     <footer>
-     
+      <div id="one">
+        <h1>EtAll Products</h1>
+        <p>We are a small-batch Ethiopian spice and coffee company. We run our business on a social model that ensures everyone gets their fair share. Our spices come in small quantities and are sustainably produced. We are on a mission to make high quality, hand-sourced Ethiopian spices available to everyone!</p>
+      </div>
+      <div id="two">
+        <h1>Shop</h1>
+         <ul>
+            <li>Spice Blends</li>
+            <li>Teff Flours</li>
+            <li>Coffee</li>
+            <li>Ebooks</li>
+         </ul>
+      </div>
+     <div id="three">
+      <h1>Store Policy</h1>
         <ul>
-          <li>Customer Service</li>
-          <li>Exchange & return</li>
-          <li>Shipping</li>
+          <li>Wholesale Inquiry</li>
+          <li> Shipping & Returns</li>
+          <li>Privacy Policy</li>
           <li>Contact Us</li>
           <li>FaQ</li>
-          <li>About us</li>
         </ul>
+        </div>
+        
       </footer>
+      <p id="copyright">&copy; 2023 by EtAll</p>
 </html>
 
 

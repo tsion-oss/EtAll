@@ -11,13 +11,17 @@
   header{
     background-color: #5b2541;
     text-align: center;
-    color: white;
+    color: #cebec6;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   section {
     display: flex;
     justify-content: center;
-    background-color: #c6c3c0;
+    background-color: white;
     padding: 0;
     z-index: 1;
     top: 50px;
@@ -37,15 +41,45 @@
   section ul li{
     display: inline-block;
     margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
   }
+  section #indexUl #bag{
+    color: black;
+    font-size: 30px;
+  }
+  section #indexUl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ section #indexUl div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+ }
+ #indexUlthree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+ }
+ #indexUlthree a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+ }
   
   section ul li a {
     justify-content: center;
     text-decoration: none;
     color: black;
     font-size: 20px;
-    font-family: "Ysabeau", sans-serif;
     background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
   }
   #product{
     display: flex;
@@ -62,34 +96,128 @@
     height: 60px;
     background-color: black;
   }
+  #product{
+    margin-bottom: 300px;
+    margin-top: 100px;
+  }
   #product .card{
     width: 500px;
     margin-bottom: 0;
+    border: solid 2px rgb(246, 246, 246);
+    background-color: rgb(246, 246, 246);
+    cursor: pointer;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
+  }
+  #product .card a{
+    color: black;
+    text-decoration: none;
+  }
+  #product button{
+    background-color:  rgb(64, 64, 64);
+    width: 400px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  #product p{
+    font-size: 35px;
+    margin-bottom: 10px;
   }
   footer{
-    position: fixed;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   align-items: center;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #5b2541;
+    background-color: gray;
     color: white;
+    padding: 50px 0px 50px 0px;
+  
   }
+
+ 
+  footer #one{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+  }
+  footer #two{
+    position: relative;
+    bottom: 75px;
+  }
+  footer #three{
+    position: relative;
+    bottom: 68px;
+  }
+  footer ul li{
+    list-style: none;
+    font-size: 23px;
+    text-align: center;
+  }
+  footer h1{
+    font-size: 40px;
+    text-align: center;
+  }
+  footer p{
+    font-size: 23px;
+    text-align: center;
+  }
+  #copyright{
+    height: 50px;
+    background-color: rgb(64, 64, 64);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   /* cartPage */
  #orderSummary {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  position: fixed;
-  /* top: 70px; */
   left: 700px;
   padding: 20px;
   text-align: center;
   margin-top: 30px;
-  border: 2px solid black;
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  text-align: center;
+  padding-right: 80px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 100px;
+ }
+ #orderSummary h1{
+  font-size: 35px;
+ }
+ #orderSummary button{
+ width: 200px;
+ background-color: rgb(64, 64, 64);
+ height: 50px;
+ font-size: 25px;
+ color: white
+ }
+ #orderSummary p{
+  font-size: 25px;
+ }
+ #orderSummary h4{
+  font-size: 40px;
  }
   #cartAll{
     display: flex;
-    flex: column;
+    flex-direction: column;
+    border-top: 2px solid lightgray;
+    margin-top: -250px;
+    margin-bottom: -200px;
+  
+    
   }
   #cart{
     display: flex;
@@ -97,17 +225,66 @@
     padding: 50px;
     margin-bottom: 150px;
   }
+  #cart #belowCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #cart #twoo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+  }
+  #cart #two
+  
   #cart .card {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     margin: 30px;
     background-color: white;
-    width: 500px;
     padding: 5px;
     text-align: center;
   }
+  #cart #twoo input{
+    width: 80px;
+    height: 40px;
+    font-size: 35px;
+    text-align: center;
+    border: 2px solid lightgray;
+    cursor: pointer;
+    position: relative;
+    top:4px;
+  }
+  #cart #belowCart button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid lightgray;
+    cursor: pointer;
+    margin-right: -5px;
+  }
+  #cart #belowCart #twoo #pricenquantity{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+  }
+  #cart #belowCart #twoo #pricenquantity #cartprice{
+    font-size: 30px;
+  }
+ #cart #belowCart #twoo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #cart #belowCart #namendelete button{
+  width: 130px;
+  margin-top: 25px;
+  font-size: 20px;
+  border: 1px solid rgb(234, 234, 234);
+ }
  
   /* login page */
 
@@ -180,6 +357,9 @@
     background: none;
     border: 1px solid lightgray;
     font-size: 20px;
+  }
+  #loginContainer h3{
+    margin-bottom: 40px;
   }
  /* singup page */
 
@@ -262,39 +442,166 @@
 
 /* home page */
 
-#homeLogo{
-  width: 200px;
-  display: flex; 
-  position: relative;
-  right: 400px;
-  
+#secondSection{
+  display: flex;
+  justify-content: center;
 }
+
 #secondSection #homeHero{
-  background: #c6c3c0;
-  height: 300px;
+  background: url('images/justtry.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  height: px;
   flex: 1;
   padding-top: 20px;
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
  
 }
-#secondSection button{
-  width: 130px;
-  height: 40px;
-  border: none;
-  background-color: black;
-  color: white;
-  font-weight: 900;
-  
+#navbar{
+  display:flex;
+  justify-content: space-around;
+}
+#navbar #bag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: black;
+  padding: 0;
+}
+#navbar #login{
+  font-size: 26px;
+  text-decoration: none;
+  list-style: none;
+  color: black;
  
+}
+#navbar #cartnlogin{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+#navbar div{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+#navbar #logo a img{
+  height: 200px;
+}
+#secondSection #homeHero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card{
   margin-bottom: 250px;
 }
-#secondSection #shopEthiopiaButton a{
+#secondSection #homeHero #shopEthiopiaButton a{
   text-decoration: none;
+  color: black;
+}
+#secondSection #homeHero button{
+  height: 50px;
+  width: 200px;
+  margin-top: 270px;
+  background-color: white;
+  font-size: 18px;
+
+}
+#ebook{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 60px;
+ 
+}
+#ebooks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 100px;
+ 
+}
+#ebookImgOne{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+
+}
+#ebookImgTwo{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+#ebooks button{
+  margin-top: 40px;
+  height: 60px;
+  background-color: #5b2541;
   color: white;
+  font-size: 20px;
+  
+}
+#ebooks h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 15px;
+  font-size: 25px;
+}
+#aboutusContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 0 200px 0 200px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  background-color: rgb(243, 243, 243);
+  
+}
+#aboutusContainer img{
+  height: 400px;
+  width: 500px;
+}
+#aboutusContainer #context{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 700px;
+}
+#aboutusContainer div{
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+#aboutusContainer h1{
+  font-size: 70px;
+  text-align: center;
+
+}
+#aboutusContainer #context h3{
+  font-size: 26px;
+}
+#aboutusContainer #context button{
+  background-color: gray;
+  height: 50px;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* product page */
@@ -314,4 +621,253 @@
 }
 #spiceMainContainer{
   margin-bottom: 200px;
+}
+ 
+/* index page */
+
+#indexproductsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  margin-top: 200px;
+  margin-bottom: -200px;
+
+}
+#indexproductsContainer img{
+  width: 380px;
+  height: 400px;
+}
+#indexproductsContainer div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30px;
+  border: 1px solid black;
+}
+#indexproductsContainer #indexCoffee button{
+  width: 380px;
+  height: 80px;
+  background-color: rgb(64, 64, 64);
+  color: white;
+  font-size: 25px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+#indexproductsContainer #indexBerbere button{
+  width: 380px;
+  height: 80px;
+  background-color: rgb(64, 64, 64);
+  color: white;
+  font-size: 25px;
+  border: 2px solid black;
+  cursor: pointer;
+  
+}
+#indexproductsContainer #indexTeff button{
+  width: 380px;
+  height: 80px;
+  background-color: rgb(64, 64, 64);
+  color: white;
+  font-size: 25px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+#what #subJoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#what #subJoin h1{
+  font-size: 50px;
+}
+#what #subJoin p{
+  font-size: 25px;
+}
+#what #subscribe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+#what{
+  margin-bottom: 100px;
+}
+#what #subscribe p{
+  font-size: 25px;
+}
+#what #subscribe input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 700px;
+  padding: 20px;
+  font-size: 25px;
+}
+#what #subscribe button{
+ width: 150px;
+ height: 50px;
+ position: relative;
+ top: 20px;
+ left: 20px;
+ background-color: rgb(64, 64, 64);
+ color: white;
+ font-size: 25px;
+}
+
+/* coffee Product Detail Page */
+
+#coffeeMainContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: -100px;
+  
+}
+#coffeeOthersBlock{
+  width: 500px;
+}
+#coffeeMainContainer img{
+  width: 600px;
+  height: 600px;
+}
+#coffeeMainContainer #coffeeImgBlock{
+  background-color: rgb(241, 241, 241);
+  margin: 60px; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#coffeeMainContainer #coffeeOthersBlock a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+#coffeeMainContainer #coffeeOthersBlock h2{
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+#coffeeMainContainer #coffeeOthersBlock .cartButton{
+  background-color: white;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid lightgray;
+}
+#coffeeMainContainer #coffeeOthersBlock H4{
+  font-size: 23px;
+}
+
+/* Spice Product Detail Page */
+
+#spiceMainContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -250px;
+  flex-wrap: wrap;
+  
+}
+#spiceOthersBlock{
+  width: 500px;
+  margin-top: 300px;
+}
+#spiceMainContainer img{
+  width: 600px;
+  height: 600px;
+  margin-bottom: 150px;
+}
+#spiceMainContainer #spiceImgBlock{
+  background-color: rgb(241, 241, 241);
+  margin: 60px; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#spiceMainContainer #spiceOthersBlock a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+#spiceMainContainer #spiceOthersBlock h2{
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+#spiceMainContainer #spiceOthersBlock .cartButton{
+  background-color: white;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid lightgray;
+}
+#spiceMainContainer #spiceOthersBlock h4{
+  font-size: 23px;
+  margin: 30px;
+}
+#spiceMainContainer #spiceOthersBlock h3{
+  font-size: 23px;
+  margin: 30px;
+}
+
+/* Teff Product Detail Page */
+
+#teffMainContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  
+}
+#teffOthersBlock{
+  width: 500px;
+  margin-bottom: 140px;
+}
+#teffMainContainer img{
+  width: 600px;
+  height: 600px;
+}
+#teffMainContainer #teffImgBlock{
+  background-color: rgb(241, 241, 241);
+  margin: 60px; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#teffMainContainer #teffOthersBlock a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+#teffMainContainer #teffOthersBlock h2{
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+#teffMainContainer #teffOthersBlock .cartButton{
+  background-color: white;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid lightgray;
+}
+#teffMainContainer #teffOthersBlock h4{
+  font-size: 23px;
+  margin-top: 30px;
 }

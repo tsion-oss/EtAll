@@ -31,7 +31,7 @@ coffeeButton.addEventListener('click', async () => {
         coffeeCard.innerHTML = `
         <a class="coffeeDetails"  data-image="${coffee.image}"href="product.html"><img style="height: 400px; width: 400px;" src="${coffee.image}" /></a>
           <a class="coffeeDetails" data-name="${coffee.name}" href="product.html"><h1>${coffee.name}</h1></a>
-          <p>${coffee.description}</p>
+          <!--<p>${coffee.description}</p>-->
           <p id="price">$ ${coffee.price}</p>
           <button class="cartButton" type="button">Add To Cart</button>
         `;
@@ -49,7 +49,9 @@ coffeeButton.addEventListener('click', async () => {
             const selectedCoffeeDiv  = document.createElement('div')
              selectedCoffeeDiv.classList.add('coffeeCardDetails')
             
-            
+             localStorage.removeItem(`selectedCoffee`)
+             localStorage.removeItem(`selectedSpice`)
+             localStorage.removeItem(`selectedteff`)
             localStorage.setItem('selectedCoffee', JSON.stringify(coffee));
             window.location.assign('/Client/product.html')
           })
@@ -98,8 +100,8 @@ spiceButton.addEventListener('click', async () => {
         spiceCard.innerHTML = `
         <a class="spiceDetails"  data-image="${spice.image}"href="product.html"><img style="height: 400px; width: 400px;" src="${spice.image}" /></a>
         <a class="spiceDetails" data-name="${spice.name}" href="product.html"><h1>${spice.name}</h1></a>
-          <p>${spice.description}</p>
-          <p><h2>Ingredient</h2>${spice.ingredient}</p>
+          <!--<p>${spice.description}</p>-->
+          <!--<p><h2>Ingredient</h2>${spice.ingredient}</p>-->
           <p id="price">$ ${spice.price}</p>
           <button class="cartButton" type="button">Add To Cart</button>
         `;
@@ -117,7 +119,9 @@ spiceButton.addEventListener('click', async () => {
             const selectedSpiceDiv  = document.createElement('div')
              selectedSpiceDiv.classList.add('spiceCardDetails')
             
-            
+             localStorage.removeItem(`selectedCoffee`)
+             localStorage.removeItem(`selectedSpice`)
+             localStorage.removeItem(`selectedteff`)
             localStorage.setItem('selectedSpice', JSON.stringify(spice));
             window.location.assign('/Client/product.html')
           })
@@ -164,7 +168,7 @@ teffButton.addEventListener('click', async () => {
         teffCard.innerHTML = `
         <a class="teffDetails"  data-image="${teff.image}"href="product.html"><img style="height: 400px; width: 400px;" src="${teff.image}" /></a>
         <a class="teffDetails" data-name="${teff.name}" href="product.html"><h1>${teff.name}</h1></a>
-          <p>${teff.description}</p>
+          <!--<p>${teff.description}</p>-->
           <p id="price">$ ${teff.price}</p>
           <button class="cartButton" type="button">Add To Cart</button>
         `;
@@ -181,8 +185,10 @@ teffButton.addEventListener('click', async () => {
             console.log(teff)
             const selectedTeffDiv  = document.createElement('div')
              selectedTeffDiv.classList.add('teffCardDetails')
-            
-            
+
+             localStorage.removeItem(`selectedCoffee`)
+             localStorage.removeItem(`selectedSpice`)
+             localStorage.removeItem(`selectedteff`)
             localStorage.setItem('selectedteff', JSON.stringify(teff));
             window.location.assign('/Client/product.html')
           })
@@ -219,17 +225,26 @@ window.addEventListener('DOMContentLoaded', () => {
     items.forEach(item => {
       const itemCard = document.createElement('div');
       itemCard.classList.add('card');
-      itemCard.innerHTML = `
+      itemCard.innerHTML = `<div id="belowCart">
+      <div id="onee">
        <img style="height: 200px; width: 200px;" src="${item.image}" />
-        <h1  id="cartName">${item.name}</h1>
-        <p id="cartprice">$ ${item.price}</p>
-        <div>
-          <button class="plus">+</button>
-          <button class="minus">-</button>
-          <button class="delete">Delete</button>
-          <input type="text" class="quantityInput" value="1">
+       </div>
+       <div id="namendelete">
+          <h1  id="cartName">${item.name}</h1>
+          <button class="delete">Remove</button>
+        </div>
+       
+        <div id="twoo">
+          <div id="pricenquantity">
+             <p id="cartprice">$ ${item.price}</p>
+             <input type="text" class="quantityInput" value="1">
           </div>
-        
+           <div id="addnminus">
+             <button id="plu" class="plus">+</button>
+             <button id="minu" class="minus">-</button>
+          </div>
+          </div>
+         
       `;
     
       cart.appendChild(itemCard)
