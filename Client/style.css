@@ -461,6 +461,7 @@
   align-items: center;
  
 }
+
 #navbar{
   display:flex;
   justify-content: space-around;
@@ -536,7 +537,7 @@
   display:flex;
   flex-direction: column;
   border: 2px solid black;
-
+    
 }
 #ebookImgTwo{
   display:flex;
