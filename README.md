@@ -2,6 +2,8 @@
 
  EtAll is a full-stack web application developed to showcase and sell Ethiopian products. This README file provides an overview of the application and guides you through its installation and usage.
 
+ ![Screenshot](client/images/sshot.png)
+
  ## Features
 
  * Home Page: Displays a welcoming page with an introduction to the Ethiopian products and their cultural significance.
@@ -69,5 +71,5 @@ If you have any questions, suggestions, or feedback, please reach out to the pro
 
 Thank you for choosing EtAll! We hope you enjoy exploring and experiencing the diverse range of Ethiopian products through our web app. Happy shopping!
 
-![Screenshot](client/images/sshot.png)
+
    

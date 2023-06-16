@@ -888,3 +888,37 @@
   font-size: 23px;
   margin-top: 30px;
 }
+
+/* about page */
+#aboutContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  padding: 100px;
+  margin-bottom: 20px;
+}
+#aboutContainer h1{
+  font-size: 70px;
+}
+#aboutContainer h2{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+#aboutContainer p{
+  font-size: 23px;
+  padding: 8px;
+}
+#aboutContainer img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#aboutContainer #aboutImgContainer{
+  display: flex;
+}
+#coffeeAboutImgContainer{
+  display: flex;
+}
