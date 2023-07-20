@@ -322,7 +322,6 @@
   #loginContainer h1{
     font-size: 75px;
   }
-  
   #loginContainer span{
     display: inline-block;
       width: 100px;
@@ -869,7 +868,6 @@
   font-size: 25px;
   position: relative;
   cursor: pointer;
-  
 }
 
 #teffMainContainer #teffOthersBlock h2{
@@ -921,4 +919,317 @@
 }
 #coffeeAboutImgContainer{
   display: flex;
+}
+
+@media screen and (max-width: 1500px) {
+/* home page */
+#ebookImgOne{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 450px;
+}
+#ebookImgTwo{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 450px;
+}
+#aboutusContainer img{
+  height: 400px;
+  width: 350px;
+}
+
+#aboutusContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 0 200px 0 200px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  background-color: rgb(243, 243, 243);
+  
+}
+#aboutusContainer #context{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 700px;
+}
+#aboutusContainer div{
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+#aboutusContainer h1{
+  font-size: 60px;
+  text-align: center;
+}
+#aboutusContainer #context h3{
+  font-size: 24px;
+}
+#aboutusContainer #context button{
+  background-color: gray;
+  height: 50px;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+#what #subJoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#what #subJoin h1{
+  font-size: 40px;
+}
+#what #subJoin p{
+  font-size: 23px;
+}
+#what #subscribe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+#what{
+  margin-bottom: 100px;
+}
+#what #subscribe p{
+  font-size: 25px;
+}
+#what #subscribe input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 500px;
+  padding: 20px;
+  font-size: 25px;
+}
+#what #subscribe button{
+ width: 150px;
+ height: 50px;
+ position: relative;
+ top: 20px;
+ left: 20px;
+ background-color: rgb(64, 64, 64);
+ color: white;
+ font-size: 25px;
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   padding: 50px 0px 50px 0px;
+ 
+ }
+
+
+ footer #one{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 400px;
+ }
+ footer #two{
+   position: relative;
+   bottom: 75px;
+ }
+ footer #three{
+   position: relative;
+   bottom: 68px;
+ }
+ footer ul li{
+   list-style: none;
+   font-size: 21px;
+   text-align: center;
+ }
+ footer h1{
+   font-size: 35px;
+   text-align: center;
+ }
+ footer p{
+   font-size: 21px;
+   text-align: center;
+ }
+ #copyright{
+   height: 50px;
+   background-color: rgb(64, 64, 64);
+   color: white;
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+}
+@media screen and (max-width: 1300px) {
+  /* home page */
+#ebookImgOne{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 400px;
+}
+#ebookImgTwo{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 400px;
+}
+#aboutusContainer img{
+  height: 300px;
+  width: 300px;
+}
+
+#aboutusContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 0 100px 0 100px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  background-color: rgb(243, 243, 243);
+  
+}
+#aboutusContainer #context{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 400px;
+}
+#aboutusContainer div{
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+#aboutusContainer h1{
+  font-size: 40px;
+  text-align: center;
+}
+#aboutusContainer #context h3{
+  font-size: 21px;
+}
+#aboutusContainer #context button{
+  background-color: gray;
+  height: 40px;
+  width: 140px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+#what #subJoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#what #subJoin h1{
+  font-size: 35px;
+}
+#what #subJoin p{
+  font-size: 21px;
+}
+#what #subscribe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+#what{
+  margin-bottom: 100px;
+}
+#what #subscribe p{
+  font-size: 22px;
+}
+#what #subscribe input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 450px;
+  padding: 20px;
+  font-size: 25px;
+}
+#what #subscribe button{
+ width: 130px;
+ height: 50px;
+ position: relative;
+ top: 20px;
+ left: 20px;
+ background-color: rgb(64, 64, 64);
+ color: white;
+ font-size: 25px;
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   padding: 50px 0px 50px 0px;
+ 
+ }
+
+
+ footer #one{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 400px;
+   position: relative;
+   bottom: 25px;
+ }
+ footer #two{
+   position: relative;
+   bottom: 75px;
+ }
+ footer #three{
+   position: relative;
+   bottom: 68px;
+ }
+ footer ul li{
+   list-style: none;
+   font-size: 19px;
+   text-align: center;
+ }
+ footer h1{
+   font-size: 30px;
+   text-align: center;
+ }
+ footer p{
+   font-size: 19px;
+   text-align: center;
+ }
+ #copyright{
+   height: 50px;
+   background-color: rgb(64, 64, 64);
+   color: white;
+   font-size: 19px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 }
