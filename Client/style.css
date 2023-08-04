@@ -6,7 +6,13 @@
   }
   body {
     line-height: 1.6;
-
+    margin: 0;
+    padding: 0;
+  }
+  #two ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
   }
   header{
     background-color: #5b2541;
@@ -16,8 +22,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
-
+  /* section #mobile-menu{
+    display: none !important;
+  } */
   section {
     display: flex;
     justify-content: center;
@@ -47,12 +58,13 @@
   }
   section #indexUl #bag{
     color: black;
-    font-size: 30px;
   }
-  section #indexUl {
+ 
+section #indexUl {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 100px;
  }
  section #indexUl div{
   display: flex;
@@ -480,6 +492,7 @@
 #navbar{
   display:flex;
   justify-content: space-around;
+  align-items: center;
 }
 #navbar #bag{
   display: flex;
@@ -920,9 +933,13 @@
 #coffeeAboutImgContainer{
   display: flex;
 }
-
+/* 
 @media screen and (max-width: 1500px) {
 /* home page */
+body{
+  padding: 0;
+  margin: 0;
+}
 #ebookImgOne{
   display:flex;
   flex-direction: column;
@@ -1075,9 +1092,68 @@ footer{
    justify-content: center;
    align-items: center;
  }
-}
-@media screen and (max-width: 1300px) {
+
+
+/* index.js page */
+  section #indexUl #bag{
+    color: black;
+  }
+ 
+section #indexUl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+ }
+ section #indexUl div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+ }
+ #indexUlthree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+ }
+ #indexUlthree a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+ }
+  
+  section ul li a {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+  }
+  #product{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 50px;
+    margin-bottom: 150px;
+  }
+  #search i{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+  } 
+ @media screen and (max-width: 1300px) {
   /* home page */
+   body{
+    padding: 0;
+    margin: 0;
+    
+  }
 #ebookImgOne{
   display:flex;
   flex-direction: column;
@@ -1231,5 +1307,629 @@ footer{
    display: flex;
    justify-content: center;
    align-items: center;
- }
+ } 
+
+
+/* index.js page */
+
+
+  section #indexUl #bag{
+  color: black;
 }
+
+section #indexUl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+section #indexUl div{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 50px;
+}
+#indexUlthree {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 100px;
+}
+#indexUlthree a{
+text-decoration: none;
+color: black;
+font-size: 25px;
+}
+
+section ul li a {
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+}
+#indexproductsContainer #indexCoffee{
+  width: 300px;
+  height: 430px;
+}
+#indexproductsContainer #indexCoffee img{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexCoffee button{
+  width: 300px;
+  border: 2px solid black;
+  height: 71.6px;
+}
+
+#indexproductsContainer #indexBerbere{
+  width: 300px;
+  height: 430px;
+}
+#indexproductsContainer #indexBerbere img{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexBerbere button{
+  width: 300px;
+  border: 2px solid black;
+}
+
+#indexproductsContainer #indexTeff{
+  width: 300px;
+  height: 430px;
+}
+#indexproductsContainer #indexTeff img{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexTeff button{
+  width: 300px;
+  border: 2px solid black;
+}
+
+
+
+/* product page */
+#product{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 50px;
+  margin-bottom: 150px;
+}
+#search i{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+}
+#product{
+  margin-bottom: 300px;
+  margin-top: 100px;
+}
+#product .card{
+  width: 400px;
+  margin-bottom: 0;
+  border: solid 2px rgb(246, 246, 246);
+  background-color: rgb(246, 246, 246);
+  cursor: pointer;
+  height: 500px;
+  font-size: 15px;
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+#product .card a{
+  color: black;
+  text-decoration: none;
+}
+#product button{
+  background-color:  rgb(64, 64, 64);
+  width: 350px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+}
+#product p{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#product h1{
+  font-size: 25px;
+}
+#product .card img{
+  width: 300px !important;
+  height: 300px !important;
+}
+
+}
+@media screen and (max-width: 1100px) {
+  /* home page */
+  body{
+    padding: 0;
+    margin: 0;
+  }
+#ebook{
+  font-size: 50px;
+  margin-top: 20px;
+}
+#ebookImgOne{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 320px;
+}
+#ebookImgOne h3{
+  font-size: 21px;
+}
+#ebookImgTwo h3{
+  font-size: 21px;
+}
+
+#ebookImgTwo{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 320px;
+}
+#aboutusContainer img{
+  height: 300px;
+  width: 300px;
+}
+
+#aboutusContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 0 50px 0 50px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  background-color: rgb(243, 243, 243);
+  
+}
+#aboutusContainer #context{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 350px;
+}
+#aboutusContainer div{
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+#aboutusContainer h1{
+  font-size: 35px;
+  text-align: center;
+}
+#aboutusContainer #context h3{
+  font-size: 19px;
+}
+#aboutusContainer #context button{
+  background-color: gray;
+  height: 40px;
+  width: 140px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+#what #subJoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#what #subJoin h1{
+  font-size: 30px;
+}
+#what #subJoin p{
+  font-size: 19px;
+}
+
+#what{
+  margin-bottom: 100px;
+}
+#what #subscribe p{
+  font-size: 22px;
+}
+#what #subscribe input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+  padding: 20px;
+  font-size: 21px;
+}
+#what #subscribe button{
+ width: 100px;
+ height: 40px;
+ position: relative;
+ top: 17px;
+ left: 20px;
+ font-size: 21px;
+}
+footer{
+  display: flex;
+ }
+
+
+ footer #one{
+   width: 400px;
+   position: relative;
+   bottom: 30px;
+ }
+ footer #two{
+   position: relative;
+   bottom: 75px;
+ }
+ footer #three{
+   position: relative;
+   bottom: 68px;
+ }
+ footer ul li{
+   list-style: none;
+   font-size: 19px;
+   
+ }
+ footer h1{
+   font-size: 30px;
+   text-align: center;
+ }
+ footer p{
+   font-size: 19px;
+
+ }
+
+/* index page */
+
+
+ #indexproductsContainer #indexCoffee{
+  width: 250px;
+  height: 350px;
+}
+#indexproductsContainer #indexCoffee img{
+  width: 250px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexCoffee button{
+  width: 250px;
+  border: 2px solid black;
+  height: 59px;
+}
+
+#indexproductsContainer #indexBerbere{
+  width: 250px;
+  height: 350px;
+}
+#indexproductsContainer #indexBerbere img{
+  width: 250px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexBerbere button{
+  width: 250px;
+  border: 2px solid black;
+}
+
+#indexproductsContainer #indexTeff{
+  width: 250px;
+  height: 350px;
+}
+#indexproductsContainer #indexTeff img{
+  width: 250px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexTeff button{
+  width: 250px;
+  border: 2px solid black;
+}
+section #indexUl {
+  display: flex;
+  gap: 10px
+}
+
+
+}
+
+@media screen and (max-width: 800px) {
+  /* home page */
+  body{
+    padding: 0;
+    margin: 0;
+  }
+#secondSection #homeHero{
+  width: 100%;
+  height: 400px;
+}
+#secondSection #homeHero button{
+  width: 140px;
+  height: 40px;
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+#navbar #homenindex{
+  display: none;
+}
+#navbar #cartnlogin{
+  display: none;
+}
+
+#ebook{
+  font-size: 50px;
+  margin-top: 20px;
+}
+#ebooks{
+  display: flex;
+  flex-direction: column;
+  gap: 100px
+}
+#ebookImgOne{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 320px;
+}
+#ebookImgOne h3{
+  font-size: 21px;
+}
+#ebookImgTwo h3{
+  font-size: 21px;
+}
+
+#ebookImgTwo{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 320px;
+}
+#aboutusContainer img{
+  height: 300px;
+  width: 300px;
+}
+
+#aboutusContainer{
+  display: flex;
+  flex-direction: column; 
+  gap: 100px;
+  padding: 0 50px 0 50px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  
+}
+#aboutusContainer #context{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+#aboutusContainer h1{
+  font-size: 35px;
+}
+#aboutusContainer #context h3{
+  font-size: 19px;
+}
+#aboutusContainer #context button{
+  height: 40px;
+  width: 140px;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+#what #subJoin {
+  display: flex;
+  flex-direction: column;
+}
+#what #subJoin h1{
+  font-size: 30px;
+}
+#what #subJoin p{
+  font-size: 19px;
+}
+
+#what{
+  margin-bottom: 100px;
+}
+#what #subscribe p{
+  font-size: 22px;
+}
+#what #subscribe input{
+  height: 40px;
+  width: 300px;
+  font-size: 21px;
+}
+#what #subscribe button{
+ width: 100px;
+ height: 40px;
+ position: relative;
+ top: 17px;
+ left: 20px;
+ font-size: 21px;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+ }
+
+
+ footer #one{
+   display: flex;
+   flex-direction: column;
+   width: 400px;
+   position: relative;
+   bottom: 30px;
+ }
+ footer #two{
+   position: relative;
+   bottom: 75px;
+ }
+ footer #three{
+   position: relative;
+   bottom: 68px;
+ }
+ footer ul li{
+   list-style: none;
+   font-size: 19px;
+   text-align: center;
+ }
+ footer h1{
+   font-size: 30px;
+   text-align: center;
+ }
+ footer p{
+   font-size: 19px;
+   text-align: center;
+ }
+
+ #indexproductsContainer #indexCoffee{
+  width: 300px;
+  height: 350px;
+}
+#indexproductsContainer #indexCoffee img{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexCoffee button{
+  width: 300px;
+  border: 2px solid black;
+  height: 50px;
+}
+
+#indexproductsContainer #indexBerbere{
+  width: 300px;
+  height: 350px;
+}
+#indexproductsContainer #indexBerbere img{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexBerbere button{
+  width: 300px;
+  border: 2px solid black;
+}
+
+#indexproductsContainer #indexTeff{
+  width: 300px;
+  height: 350px;
+}
+#indexproductsContainer #indexTeff img{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer #indexTeff button{
+  width: 300px;
+  border: 2px solid black;
+}
+#indexproductsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 100px;
+}
+section #login{
+  display: none;
+}
+section #indexUl  #indexUltwo{
+ position: relative;
+ left: 70px;
+}
+section #indexUl #indexUlone{
+  position: relative;
+  left: 70px;
+}
+section #indexUl #indexUlthree{
+  position: relative;
+  right: 30px;
+}
+
+ /* cartPage */
+ #orderSummary {
+  display: flex;
+  flex-direction: column;
+ }
+ #orderSummary h1{
+  font-size: 28px;
+ }
+ #orderSummary button{
+ width: 150px;
+ background-color: rgb(64, 64, 64);
+ height: 40px;
+ }
+ #orderSummary p{
+  font-size: 20px;
+ }
+ #orderSummary h4{
+  font-size: 30px;
+ }
+  #cart{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-bottom: 150px;
+  }
+  #cart #belowCart{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #cart #belowCart button {
+    width: 40px;
+    height: 40px;
+  }
+  #cart #belowCart #twoo #pricenquantity{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+ 
+  }
+  #cart #belowCart #twoo #pricenquantity #cartprice{
+    font-size: 30px;
+  }
+
+ #cart #belowCart #namendelete button{
+  width: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 20px;
+ }
+ 
+
+}
+@media screen and (max-width: 784px) {
+ 
+
+ a#coffee, a#spice, a#teff{
+  font-size: 20px;
+ }
+ a#bag.out{
+  position: relative;
+  right: 50px;
+ }
+#indexUl img{
+  position: relative;
+  left: 50px;
+}
+
+footer p{
+  width: 350px;
+}
+#subscribe{
+  display: flex;
+  flex-direction: column;
+}
+} 

@@ -21,7 +21,7 @@ coffeeButton.addEventListener('click', async () => {
   cart.innerHTML = ""
   cartAll.style.display = "none"
   try {
-    const response = await axios.get('http://localhost:3001/api/coffees');
+    const response = await axios.get('https://etall-production.up.railway.app/api/coffees');
     const coffees = response.data.coffees;
     console.log(coffees);
     if (coffees) {
@@ -90,7 +90,7 @@ spiceButton.addEventListener('click', async () => {
   cart.innerHTML = ""
   cartAll.style.display = "none"
   try {
-    const response = await axios.get('http://localhost:3001/api/spices');
+    const response = await axios.get('https://etall-production.up.railway.app/api/spices');
     const spices = response.data.spices;
     console.log(spices);
     if (spices) {
@@ -158,7 +158,7 @@ teffButton.addEventListener('click', async () => {
   cart.style.display = "none"
   orderSummary.style.display = 'none'
   try {
-    const response = await axios.get('http://localhost:3001/api/teffs');
+    const response = await axios.get('https://etall-production.up.railway.app/api/teffs');
     const teffs = response.data.teffs;
     console.log(teffs);
     if (teffs) {
@@ -243,7 +243,7 @@ window.addEventListener('DOMContentLoaded', () => {
              <button id="plu" class="plus">+</button>
              <button id="minu" class="minus">-</button>
           </div>
-          </div>
+        </div>
          
       `;
     
